@@ -1,0 +1,63 @@
+/* A quiet field of blue light behind the launch announcement. */
+.launch-redesign {
+  background: #04080e;
+  isolation: isolate;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+.launch-redesign .ambient-scene {position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1;}
+.ambient-light {position:absolute;filter:blur(65px);border-radius:50%;will-change:transform;}
+.light-one {width:75%;height:62%;left:-32%;top:10%;background:radial-gradient(ellipse,#087ba84d,transparent 67%);animation:light-drift 19s ease-in-out infinite alternate;}
+.light-two {width:85%;height:70%;right:-36%;top:-15%;background:radial-gradient(ellipse,#246af45c,transparent 66%);animation:light-drift 23s ease-in-out -8s infinite alternate-reverse;}
+.light-three {width:85%;height:32%;left:8%;bottom:-21%;background:#278de5;opacity:.38;animation:horizon-breathe 12s ease-in-out infinite;}
+.ambient-grid {position:absolute;inset:0;background-image:linear-gradient(#789bbb08 1px,transparent 1px),linear-gradient(90deg,#789bbb08 1px,transparent 1px);background-size:100px 100px;mask-image:linear-gradient(transparent 20%,#000 100%);}
+.ambient-horizon {position:absolute;bottom:0;left:10%;width:80%;height:1px;background:linear-gradient(90deg,transparent,#82cfff,transparent);box-shadow:0 0 42px 9px #329ffb33;}
+.ambient-specks span {position:absolute;width:2px;height:2px;border-radius:50%;background:#9fdbff;box-shadow:0 0 10px #57b8f7;animation:speck-rise 12s ease-in-out infinite;opacity:.2;}
+.launch-redesign .site-header {height:100px;margin-inline:6%;border-color:#ffffff0a;animation:arrive .8s ease both;}
+.launch-redesign .brand {font-size:28px;letter-spacing:-1px;gap:8px;}
+.launch-redesign .header-link {padding:10px 16px;border:1px solid #ffffff14;border-radius:100px;font-size:13px;background:#ffffff03;transition:background .25s,border-color .25s;}
+.launch-redesign .header-link:hover {background:#ffffff08;border-color:#63baff66;}
+.launch-redesign .hero.hero-centered {display:grid;grid-template-columns:1fr;place-items:center;min-height:calc(100svh - 188px);max-width:none;width:100%;padding:80px 24px 100px;margin:0;text-align:center;flex:1;}
+.launch-redesign .hero-copy {display:block;width:min(100%,1040px);position:relative;z-index:2;}
+.launch-redesign .eyebrow {display:inline-flex;justify-content:center;gap:10px;padding:9px 14px;border:1px solid #8dbbe529;border-radius:100px;background:linear-gradient(120deg,#8dbbe509,#8dbbe502);font-size:11px;letter-spacing:.14em;color:#aec4d7;animation:arrive .9s .1s ease both;}
+.launch-redesign .eyebrow .status-dot {background:#155a91;width:6px;height:6px;box-shadow:0 0 0 4px #155a9122;animation:launch-dot-pulse 1s ease-in-out infinite;}
+@keyframes launch-dot-pulse {0%,100% {transform:scale(1);box-shadow:0 0 0 3px #155a9122;opacity:.75;}50% {transform:scale(1.22);box-shadow:0 0 0 6px #155a9110;opacity:1;}}
+.launch-redesign h1 {font-size:clamp(44px,6.7vw,94px);font-weight:450;line-height:1.1;letter-spacing:-.065em;margin:30px 0 24px;animation:arrive 1s .2s ease both;}
+.launch-redesign h1 span {display:inline-block;background:linear-gradient(100deg,#a9c3d5 0%,#e1f4ff 30%,#6bb7ef 65%,#92a8c5 100%);background-size:180% 100%;background-clip:text;color:transparent;animation:text-light 16s ease-in-out infinite alternate;}
+.launch-redesign .intro {font-size:17px;line-height:1.8;max-width:540px;margin-inline:auto;color:#94a5b7;animation:arrive 1s .32s ease both;}
+.launch-redesign .signup-area {width:100%;max-width:480px;margin:36px auto 0;text-align:center;animation:arrive 1s .44s ease both;}
+.launch-redesign .form-heading {color:#c4ced8;font-size:13px;letter-spacing:.02em;margin:0 0 14px;}
+.launch-redesign .email-control {background:#0d1620b3;border:1px solid #9fcaed26;border-radius:14px;box-shadow:0 12px 45px #0004,inset 0 1px #ffffff07;transition:border-color .25s,box-shadow .25s;}
+.launch-redesign .email-control:focus-within {border-color:#55aeeb88;box-shadow:0 0 0 4px #238ade12,0 12px 45px #0004;}
+.launch-redesign .email-control input {font-size:16px;}
+.launch-redesign .email-control button {background:linear-gradient(135deg,#9ad6ff,#53afea);color:#071c2c;border:0;border-radius:9px;padding:15px 18px;box-shadow:inset 0 1px #ffffff66;transition:filter .2s,transform .2s;}
+.launch-redesign .email-control button:hover {filter:brightness(1.12);transform:translateY(-1px);}
+.launch-redesign button svg,.launch-redesign .header-link svg {transition:transform .25s;}
+.launch-redesign button:hover svg,.launch-redesign .header-link:hover svg {transform:translateX(3px);}
+.launch-redesign .success-card {text-align:left;background:#102431b3;border-color:#4e9bc755;animation:arrive .5s ease both;}
+.launch-redesign .site-footer {min-height:88px;margin-inline:6%;color:#778799;border-color:#ffffff0a;font-size:12px;animation:arrive 1s .6s ease both;}
+.launch-redesign .footer-tag {font-size:10px;letter-spacing:.16em;color:#93a7b9;}
+@keyframes arrive {from {opacity:0;transform:translateY(18px);filter:blur(5px);}to {opacity:1;transform:translateY(0);filter:blur(0);}}
+@keyframes light-drift {from {transform:translate3d(-3%,-5%,0) scale(.95);}to {transform:translate3d(13%,12%,0) scale(1.12);}}
+@keyframes horizon-breathe {0%,100% {transform:scaleX(.85);opacity:.25;}50% {transform:scaleX(1.1);opacity:.45;}}
+@keyframes speck-rise {0%,100% {transform:translateY(0);opacity:.08;}50% {transform:translateY(-35px);opacity:.5;}}
+@keyframes text-light {from {background-position:0% 50%;}to {background-position:100% 50%;}}
+@media (max-width:760px) {
+  .launch-redesign .site-header {min-height:80px;height:80px;}
+  .launch-redesign .brand {font-size:25px;}
+  .launch-redesign .header-link {font-size:12px;padding:9px 12px;gap:6px;}
+  .launch-redesign .hero.hero-centered {min-height:calc(100svh - 152px);padding:58px 6% 68px;}
+  .launch-redesign h1 {font-size:clamp(37px,8.1vw,60px);letter-spacing:-.06em;line-height:1.14;margin-top:26px;}
+  .launch-redesign .intro {font-size:15px;line-height:1.8;}
+  .launch-redesign .signup-area {margin-top:30px;max-width:400px;}
+  .launch-redesign .email-control {background:none;border:0;box-shadow:none;border-radius:0;gap:12px 0;}
+  .launch-redesign .email-control:focus-within {border:0;box-shadow:none;}
+  .launch-redesign .email-control input {background:#0e1823c9;border:1px solid #9fcaed33;border-radius:11px;min-height:56px;}
+  .launch-redesign .email-control button {border-radius:11px;min-height:52px;font-size:15px;}
+  .launch-redesign .site-footer {min-height:72px;}
+  .light-one {width:140%;left:-80%;filter:blur(40px);}
+  .light-two {width:140%;right:-80%;filter:blur(40px);}
+  .ambient-grid {background-size:64px 64px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .launch-redesign *, .launch-redesign *::before, .launch-redesign *::after {animation:none!important;transition:none!important;}
+}
